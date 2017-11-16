@@ -5,7 +5,14 @@ class FlattenArrayTest < Minitest::Test
     refute_nil ::FlattenArray::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_flatten_multidimensional_array
+    array = [[1,2,[3]],4]
+    ::FlattenArray::flatten(array)
   end
+
+  def test_flatten_simple_array
+    array = [-1,3,5,3]
+    ::FlattenArray::flatten(array)
+  end
+
 end
